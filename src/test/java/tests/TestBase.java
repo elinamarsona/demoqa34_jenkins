@@ -16,9 +16,9 @@ public class TestBase {
 //        Configuration.browser = System.getProperty("BROWSER", "chrome");
 //        Configuration.browserVersion = System.getProperty("BROWSER_VERSION", "128.0");
 //        Configuration.browserSize = System.getProperty("BROWSER_SIZE", "1920x1080");
-        Configuration.browser = System.getProperty("BROWSER");
-        Configuration.browserVersion = System.getProperty("BROWSER_VERSION");
-        Configuration.browserSize = System.getProperty("BROWSER_SIZE");
+        Configuration.browser = System.getProperty("browser");
+        Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.browserSize = System.getProperty("browserSize");
         Configuration.remote = System.getProperty("remoteUrl");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
