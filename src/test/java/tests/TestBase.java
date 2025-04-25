@@ -7,7 +7,6 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
@@ -17,7 +16,7 @@ public class TestBase {
         Configuration.browser = System.getProperty("BROWSER", "chrome");
         Configuration.browserVersion = System.getProperty("BROWSER_VERSION", "128.0");
         Configuration.browserSize = System.getProperty("BROWSER_SIZE", "1920x1080");
-        Configuration.remote = System.getProperty("REMOTE_DRIVER_URL");
+        Configuration.remote = System.getProperty("remoteUrl");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
         //Configuration.holdBrowserOpen = true;

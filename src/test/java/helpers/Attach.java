@@ -44,6 +44,7 @@ public class Attach {
     }
 
     public static URL getVideoUrl() {
+        //Configuration.remote = System.getProperty("REMOTE_DRIVER_URL");
         String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
         try {
             return new URL(videoUrl);
