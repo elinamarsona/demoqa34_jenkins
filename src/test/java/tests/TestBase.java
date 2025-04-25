@@ -10,15 +10,17 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
+import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
+
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
-//        Configuration.browser = System.getProperty("BROWSER", "chrome");
-//        Configuration.browserVersion = System.getProperty("BROWSER_VERSION", "128.0");
-//        Configuration.browserSize = System.getProperty("BROWSER_SIZE", "1920x1080");
-        Configuration.browser = System.getProperty("browser");
-        Configuration.browserVersion = System.getProperty("browserVersion");
-        Configuration.browserSize = System.getProperty("browserSize");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+//        Configuration.browser = System.getProperty("browser");
+//        Configuration.browserVersion = System.getProperty("browserVersion");
+//        Configuration.browserSize = System.getProperty("browserSize");
         Configuration.remote = System.getProperty("remoteUrl");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
@@ -38,5 +40,6 @@ public class TestBase {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+        closeWebDriver();
     }
 }
