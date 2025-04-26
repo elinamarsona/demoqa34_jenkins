@@ -56,12 +56,12 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setGender(String value) {
-        genderSelect.$(byText(value)).click();
+        genderSelect.scrollTo().$(byText(value)).click();
         return this;
     }
 
     public RegistrationPage setUserNumber(String value) {
-        userNumberInput.setValue(value);
+        userNumberInput.scrollTo().setValue(value);
         return this;
     }
 
@@ -77,7 +77,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setHobbies(String value) {
-        hobbiesSelect.$(byText(value)).click();
+        hobbiesSelect.scrollTo().$(byText(value)).click();
         return this;
     }
 
